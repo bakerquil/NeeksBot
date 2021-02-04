@@ -36,7 +36,12 @@ const artReact = () => {
         //add the emotes she wants
     }
 }
-
+// neeks social channel id just add the right emotes
+const socialReact = () => {
+    if (message.channel.id === "748388318676254721"){
+        findEmotes()
+    }
+}
 const findEmotes = (emote) => {
   let emotefind =  message.guild.emojis.cache.find(
         (emoji) => emoji.name === emote
@@ -44,6 +49,7 @@ const findEmotes = (emote) => {
     message.react(emotefind)
 }
 
+socialReact();
 artReact();
 newsReact();
 response();
